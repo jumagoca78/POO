@@ -2,18 +2,19 @@
 //Presione el botón en el control remoto y abre la puerta
 //Presione el botón nuevamente para cerrar la puerta
 
+
+
+import javax.swing.JFrame; //Importamos la clase JFrame de la librería javax.swing para Ventanas
+import javax.swing.JButton; //Importamos la clase JButton de la librería javax.swing para Botones
+import javax.swing.JTextArea; //Importamos la clase JTextArea de la librería javax.swing para Áreas de Texto
+import java.awt.event.ActionListener; //Importamos la clase ActionListener de la librería java.awt.event para escuchar eventos como el click
+import java.awt.event.ActionEvent; //Importamos la clase ActionEvent de la librería java.awt.event para manejar eventos cuando ocurren
+
 //En java una interfaz grafíca se compone de botones, etiquetas, campos de texto, etc.
 //En este caso se tiene un botón que al presionarlo se abre la puerta y al presionarlo nuevamente se cierra la puerta
 //Vamos a crear primero una ventana con un botón que al presionarlo se imprime un mensaje en un TextArea (area de texto)
 //Java tiene una clase llamada JFrame que es una ventana que se puede personalizar
 //Vamos a crear una clase llamada DogDoorSimple que extienda de JFrame, es decir, queremos que nuestra ventana sea una ventana de Java
-
-import javax.swing.JFrame; //Importamos la clase JFrame de la librería javax.swing
-import javax.swing.JButton; //Importamos la clase JButton de la librería javax.swing
-import javax.swing.JTextArea; //Importamos la clase JTextArea de la librería javax.swing
-import java.awt.event.ActionListener; //Importamos la clase ActionListener de la librería java.awt.event
-import java.awt.event.ActionEvent; //Importamos la clase ActionEvent de la librería java.awt.event
-
 
 public class DogDoorSimple extends JFrame{
     boolean doorOpen = false; //Creamos una variable booleana que indica si la puerta está abierta o cerrada
