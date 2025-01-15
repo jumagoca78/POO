@@ -69,7 +69,7 @@ public class ShapesGUI extends JFrame {
 
     // Método para simular la reproducción de sonido
     private void playSound(String shapeName) {
-        System.out.println("Reproduciendo sonido para " + shapeName);
+        System.out.println("Reproduciendo sonido AIF para " + shapeName);
     }
 
     // Método principal para ejecutar la aplicación

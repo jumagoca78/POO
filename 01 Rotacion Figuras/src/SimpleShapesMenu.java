@@ -5,7 +5,6 @@ public class SimpleShapesMenu {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int opcion;
-
         System.out.println("=== Menú de Formas Geométricas ===");
         System.out.println("1. Cuadrado");
         System.out.println("2. Círculo");
@@ -57,27 +56,27 @@ public class SimpleShapesMenu {
 
     // Funciones específicas de rotación
     public static void rotarCuadrado() {
-        System.out.println("Rotando el Cuadrado 360°...");
+        System.out.println("Rotando el Cuadrado 180°...");
     }
 
     public static void rotarCirculo() {
-        System.out.println("Rotando el Círculo 360°...");
+        System.out.println("Rotando el Círculo 180°...");
     }
 
     public static void rotarTriangulo() {
-        System.out.println("Rotando el Triángulo 360°...");
+        System.out.println("Rotando el Triángulo 180°...");
     }
 
     // Funciones específicas de sonido
     public static void reproducirSonidoCuadrado() {
-        System.out.println("Reproduciendo sonido AIF del Cuadrado...");
+        System.out.println("Reproduciendo sonido MP3 del Cuadrado...");
     }
 
     public static void reproducirSonidoCirculo() {
-        System.out.println("Reproduciendo soni      do AIF del Círculo...");
+        System.out.println("Reproduciendo soni      do MP3 del Círculo...");
     }
 
     public static void reproducirSonidoTriangulo() {
-        System.out.println("Reproduciendo sonido AIF del Triángulo...");
+        System.out.println("Reproduciendo sonido MP3 del Triángulo...");
     }
 }
