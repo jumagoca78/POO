@@ -1,8 +1,8 @@
-public class DogRemote {
+public class Remote {
 
     private DogDoor door;
   
-    public DogRemote(DogDoor door) {
+    public Remote(DogDoor door) {
       this.door = door;
     }
   

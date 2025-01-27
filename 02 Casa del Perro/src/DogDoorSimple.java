@@ -39,6 +39,8 @@ public class DogDoorSimple extends JFrame{
         JTextArea textArea = new JTextArea();//Creamos un área de texto vacía
         textArea.setEditable(false);//Establecemos que el área de texto no se pueda editar
         textArea.setText("The door is closed\n");//Establecemos un texto inicial en el área de texto
+        textArea.setAlignmentX(CENTER_ALIGNMENT);
+        textArea.setAlignmentY(CENTER_ALIGNMENT);    
         add(textArea, java.awt.BorderLayout.CENTER);//Agregamos el área de texto a la ventana
         
 
