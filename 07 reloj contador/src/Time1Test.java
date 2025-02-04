@@ -9,6 +9,8 @@
 * Este código es una prueba unitaria básica para la clase Time1, asegurando que maneja correctamente 
 * la inicialización, la actualización de la hora y la validación de datos inválidos.
  */
+import java.util.Scanner;
+
 import javax.swing.JOptionPane;
 
 public class Time1Test {
@@ -23,7 +25,18 @@ public class Time1Test {
             time.toStandardString();
 
         // cambia la hora y actualiza el tiempo en la salida
-        time.setTime(13, 27, 6);
+        int hour=0, minute=0, second=0;
+        Scanner input = new Scanner(System.in);
+        System.out.println("Ingrese la hora: ");
+        hour = input.nextInt();
+
+        System.out.println("Ingrese los minutos: ");
+        minute = input.nextInt();
+
+        System.out.println("Ingrese los segundos: ");
+        second = input.nextInt();
+
+        time.setTime(hour, minute, second);
         output += "\n\nUniversal time after setTime is: " +
             time.toUniversalString() +
             "\nStandard time after setTime is: " +
@@ -38,6 +51,7 @@ public class Time1Test {
         JOptionPane.showMessageDialog(null, output,
             "Testing Class Time1", JOptionPane.INFORMATION_MESSAGE);
 
+        input.close();
         System.exit(0);
     }
 } // end class TimeTest1
