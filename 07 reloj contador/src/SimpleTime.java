@@ -1,4 +1,7 @@
 // La clase SimpleTime demuestra la referencia "this"
+
+import java.text.DecimalFormat;
+
 class SimpleTime {
     private int hour;
     private int minute;
