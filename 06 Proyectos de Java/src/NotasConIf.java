@@ -2,6 +2,10 @@
  * Programa que lee una nota y muestra la calificación correspondiente
  * utilizando la estructura de control if-else-if
  * 
+ * 
+ * El método parseInt de la clase Integer convierte una cadena en un número entero
+ * 
+ * 
  */
 import java.util.Scanner;
 public class NotasConIf {
