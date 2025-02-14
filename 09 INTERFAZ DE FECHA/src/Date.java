@@ -12,11 +12,6 @@ public class Date{
 
     //Constructores
 
-    /*
-    public tipoDeDatoResultado nombreFuncion(parametros){
-    
-    }*/
-
     public Date(){
         setDate(1, 1, 1900);
     }
@@ -73,8 +68,15 @@ public class Date{
         }
         else{
         return diasMEs[m];
-
+        }
     }
+
+    /*
+     * Función que determina si un año es bisiesto
+     * @param a año
+     * 
+     * 
+     */
 
     private boolean esBisiesto(int a){
         if ((a %4 ==0 && a%100!=0) || (a%400==0)){
@@ -85,6 +87,13 @@ public class Date{
         }
     }
 
+    /*
+     * Función que asigna un año a un objeto de la clase Date
+     * @param a año
+     * 
+     * 
+     */
+
     public void setAño(int a){
         //cualquier año debe ser mayor o igual a 1900
         //menor a igual a 2025
@@ -92,25 +101,49 @@ public class Date{
             año = a;
         }
         else{
-            System.out.println("Error en el año");
+            System.out.println("Error en el año " + a);
             año = 1900;
         }
         setDia(dia);
 
     }
-
+/*
+ *  Función que asigna una fecha a un objeto de la clase Date
+ * @param d día
+ * @param m mes
+ * @param a año
+ *  
+ * */
     public void setDate(int d, int m, int a){
         setAño(a);
         setMes(m);
         setDia(d);
     }
     
-
+/*
+ * Función que asigna una fecha a un objeto de la clase Date
+ * @param d objeto de la clase Date
+ * 
+ * 
+ */
 
     //funcion que imprime el valor de la fecha
     @Override
     public String toString(){
         return dia + "/" + mes + "/" + año;
+    }
+
+    //getters
+    public int getDia(){
+        return dia;
+    }
+
+    public int getMes(){
+        return mes;
+    }
+
+    public int getAño(){
+        return año;
     }
 
 }
