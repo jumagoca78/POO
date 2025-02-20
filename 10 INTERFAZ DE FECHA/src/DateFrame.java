@@ -17,12 +17,12 @@ import javax.swing.*;
  * 
  * 
  */
-public class DateGUI {
+public class DateFrame {
     private Date date;
     private JTextField dayField, monthField, yearField;
     private JLabel displayLabel;
 
-    public DateGUI() {
+    public DateFrame() {
         date = new Date();
 
         JFrame frame = new JFrame("Date GUI - Estudiantes");
@@ -48,6 +48,18 @@ public class DateGUI {
         frame.setVisible(true);
     }
 
+    /*
+     * Método que crea un campo de texto
+     * @param JFrame frame: Ventana de la interfaz gráfica
+     * @param String labelText: Texto que se mostrará en el campo de texto
+     * @return JTextField: Campo de texto creado
+     * 
+     * JPanel panel: Panel para organizar los elementos
+     * JTextField field: Campo de texto
+     * 
+     * panel.add(new JLabel(labelText)): Añade una etiqueta al panel
+     * panel.add(field): Añade el campo de texto al panel
+     */
     private JTextField createField(JFrame frame, String labelText) {
         JPanel panel = new JPanel(new FlowLayout());
         panel.add(new JLabel(labelText));
@@ -57,15 +69,34 @@ public class DateGUI {
         return field;
     }
 
-    private void updateDay() { date.setDia(Integer.parseInt(dayField.getText())); updateDisplay(); }
-    private void updateMonth() { date.setMes(Integer.parseInt(monthField.getText())); updateDisplay(); }
-    private void updateYear() { date.setAño(Integer.parseInt(yearField.getText())); updateDisplay(); }
-    private void nextDay() { date.siguienteDia(); updateDisplay(); }
+    private void updateDay() { 
+        date.setDia(Integer.parseInt(dayField.getText())); 
+        updateDisplay(); 
+    }
+    
+    private void updateMonth() { 
+        date.setMes(Integer.parseInt(monthField.getText())); 
+        updateDisplay(); 
+    }
+    
+    private void updateYear() { 
+        date.setAño(Integer.parseInt(yearField.getText())); 
+        updateDisplay(); 
+    }
 
-    private void updateDisplay() { displayLabel.setText(getDateString()); }
-    private String getDateString() { return "Fecha: " + date.toNumericString() + " | " + date.toTextualString(); }
+    private void nextDay() { 
+        date.siguienteDia(); 
+        updateDisplay(); 
+    }
 
-    public static void main(String[] args) { SwingUtilities.invokeLater(DateGUI::new); }
+    private void updateDisplay() { 
+        displayLabel.setText(getDateString()); 
+    }
+
+    private String getDateString() { 
+        return "Fecha: " + date.toFechaAbreviadaString() + " | " + date.toFechaAbreviadaString(); }
+
+    public static void main(String[] args) { SwingUtilities.invokeLater(DateFrame::new); }
 
 
 }
