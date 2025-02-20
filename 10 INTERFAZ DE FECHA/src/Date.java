@@ -161,6 +161,21 @@ public final class Date{
         }
     }
 
+    public void anteriorDia() {
+        if (dia > 1) {
+            dia--;
+        } else {
+            if (mes > 1) {
+                mes--;
+                dia = diasEnElMes(mes, año);
+            } else {
+                año--;
+                mes = 12;
+                dia = 31;
+            }
+        }
+    }
+
      // Formato numérico "DD/MM/YYYY"
      public String toNumericString() {
         return String.format("%02d/%02d/%04d", dia, mes, año);

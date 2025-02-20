@@ -40,10 +40,14 @@ public class DateFrame {
         JButton nextDayButton = new JButton("Avanzar Día");
         frame.add(nextDayButton);
 
+        JButton previousDayButton = new JButton("Retroceder Día");
+        frame.add(previousDayButton);
+
         dayField.addActionListener(e -> updateDay());
         monthField.addActionListener(e -> updateMonth());
         yearField.addActionListener(e -> updateYear());
         nextDayButton.addActionListener(e -> nextDay());
+        previousDayButton.addActionListener(e -> previousDay());
 
         frame.setVisible(true);
     }
@@ -89,12 +93,17 @@ public class DateFrame {
         updateDisplay(); 
     }
 
+    private void previousDay() { 
+        date.anteriorDia(); 
+        updateDisplay(); 
+    }
+
     private void updateDisplay() { 
         displayLabel.setText(getDateString()); 
     }
 
     private String getDateString() { 
-        return "Fecha: " + date.toFechaAbreviadaString() + " | " + date.toFechaAbreviadaString(); }
+        return "Fecha: " + date.toNumericString() + " | " + date.toNumericString(); }
 
     public static void main(String[] args) { SwingUtilities.invokeLater(DateFrame::new); }
 
