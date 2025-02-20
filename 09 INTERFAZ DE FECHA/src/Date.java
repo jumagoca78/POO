@@ -95,6 +95,7 @@ public class Date{
             System.out.println("Error en el año");
             año = 1900;
         }
+        setMes (mes);
         setDia(dia);
 
     }

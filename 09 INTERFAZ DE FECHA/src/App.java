@@ -4,7 +4,7 @@ public class App {
         Date d = new Date();
         Date soloDia = new Date (13);
         Date soloDiaMes = new Date (13, 5);
-        Date soloDiaMesAño = new Date (101, 85, 20021);
+        Date soloDiaMesAño = new Date (1, 5, 2021);
         Date copia = new Date (soloDiaMesAño);
         //Imprimir el valor de la fecha        
         System.out.println(copia.toString());
