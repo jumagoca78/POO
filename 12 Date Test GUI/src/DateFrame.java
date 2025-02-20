@@ -17,12 +17,12 @@ import javax.swing.*;
  * 
  * 
  */
-public class DateGUI {
+public class DateFrame {
     private Date date;
     private JTextField dayField, monthField, yearField;
     private JLabel displayLabel;
 
-    public DateGUI() {
+    public DateFrame() {
         date = new Date();
 
         JFrame frame = new JFrame("Date GUI - Estudiantes");
@@ -63,9 +63,9 @@ public class DateGUI {
     private void nextDay() { date.siguienteDia(); updateDisplay(); }
 
     private void updateDisplay() { displayLabel.setText(getDateString()); }
-    private String getDateString() { return "Fecha: " + date.toNumericString() + " | " + date.toTextualString(); }
+    private String getDateString() { return "Fecha: " + date.toFechaAbreviadaString() + " | " + date.toFechaAbreviadaString(); }
 
-    public static void main(String[] args) { SwingUtilities.invokeLater(DateGUI::new); }
+    public static void main(String[] args) { SwingUtilities.invokeLater(DateFrame::new); }
 
 
 }
