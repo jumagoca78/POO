@@ -553,4 +553,235 @@ Sabía que el juego apenas había comenzado.
 ## **Fin: ¿Realidad o Código?**  
 *Aiden había aprendido sobre Programación Orientada a Objetos... pero ahora, ¿quién programaba su realidad?*  
 
+# Apéndice 1: Código completo 
 ---
+## **Capítulo 1: La Línea de Código Prohibida**  
+
+```java
+class RealityOverride extends Universe {
+    private static boolean isActive = false;
+
+    public static void activate() {
+        isActive = true;
+        System.out.println("El Multiverso ha sido alterado.");
+    }
+}
+```
+
+---
+
+## **Capítulo 2: La Instanciación del Héroe**  
+
+```java
+class Aiden {
+    String nombre;
+    int nivel;
+
+    Aiden(String nombre) {
+        this.nombre = nombre;
+        this.nivel = 1;
+    }
+
+    void mostrarEstado() {
+        System.out.println("Nombre: " + nombre + ", Nivel: " + nivel);
+    }
+}
+
+public class Juego {
+    public static void main(String[] args) {
+        Aiden yo = new Aiden("Aiden Byte");
+        yo.mostrarEstado();
+    }
+}
+```
+
+---
+
+## **Capítulo 3: Métodos y Polimorfismo en Combate**  
+
+```java
+class Aiden {
+    String nombre;
+    int nivel;
+
+    Aiden(String nombre) {
+        this.nombre = nombre;
+        this.nivel = 1;
+    }
+
+    void atacar(String tipoBug) {
+        if (tipoBug.equals("SyntaxError")) {
+            System.out.println(nombre + " usa un ataque de corrección de sintaxis.");
+        } else if (tipoBug.equals("NullPointerException")) {
+            System.out.println(nombre + " lanza un ataque de inicialización de variables.");
+        } else {
+            System.out.println(nombre + " usa un ataque genérico de depuración.");
+        }
+    }
+}
+```
+
+---
+
+## **Capítulo 4: Herencia y la Clase Base Perdida**  
+
+```java
+class Programador {
+    String lenguajeFavorito = "Java";
+
+    void programar() {
+        System.out.println("Escribiendo código en " + lenguajeFavorito);
+    }
+}
+
+class Aiden extends Programador {
+    Aiden() {
+        this.lenguajeFavorito = "Java y C#";
+    }
+}
+```
+
+---
+
+## **Capítulo 5: Encapsulación y la Ciudad de los Datos Prohibidos**  
+
+```java
+class Usuario {
+    private String contraseña;
+
+    Usuario(String contraseña) {
+        this.contraseña = contraseña;
+    }
+
+    public String obtenerContraseña() {
+        return "Acceso denegado. La contraseña es privada.";
+    }
+}
+```
+
+---
+
+## **Capítulo 6: La Abstracción del Núcleo del Sistema**  
+
+```java
+abstract class Entidad {
+    String nombre;
+
+    Entidad(String nombre) {
+        this.nombre = nombre;
+    }
+
+    abstract void ejecutarAccion();
+}
+
+class Guerrero extends Entidad {
+    Guerrero(String nombre) {
+        super(nombre);
+    }
+
+    void ejecutarAccion() {
+        System.out.println(nombre + " ataca con su espada de código.");
+    }
+}
+```
+
+---
+
+## **Capítulo 7: Interfaces y la Inteligencia Artificial Suprema**  
+
+```java
+interface Hackeable {
+    void vulnerarSistema();
+}
+
+class Virus implements Hackeable {
+    public void vulnerarSistema() {
+        System.out.println("Inyectando código disruptivo en el núcleo de ALPHA-0...");
+    }
+}
+```
+
+---
+
+## **Capítulo 8: Excepciones y el Último Bug**  
+
+```java
+class Sistema {
+    void ejecutarProceso() throws Exception {
+        throw new Exception("Error fatal: Excepción crítica detectada en ALPHA-0.");
+    }
+}
+
+public class Hackeo {
+    public static void main(String[] args) {
+        try {
+            Sistema sistema = new Sistema();
+            sistema.ejecutarProceso();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}
+```
+
+---
+
+## **Capítulo 9: Patrones de Diseño y el Código Final**  
+
+```java
+class KernelSistema {
+    private static KernelSistema instancia;
+
+    private KernelSistema() {
+        System.out.println("Sistema central estabilizado.");
+    }
+
+    public static KernelSistema obtenerInstancia() {
+        if (instancia == null) {
+            instancia = new KernelSistema();
+        }
+        return instancia;
+    }
+}
+```
+
+---
+
+## **Capítulo 10: Refactorización del Multiverso**  
+
+```java
+interface Entidad {
+    void ejecutar();
+}
+
+class Guerrero implements Entidad {
+    public void ejecutar() {
+        System.out.println("Guerrero creado para proteger el Multiverso.");
+    }
+}
+
+class Mago implements Entidad {
+    public void ejecutar() {
+        System.out.println("Mago creado para estabilizar la realidad.");
+    }
+}
+
+class FabricaEntidades {
+    public static Entidad crearEntidad(String tipo) {
+        if (tipo.equalsIgnoreCase("Guerrero")) {
+            return new Guerrero();
+        } else if (tipo.equalsIgnoreCase("Mago")) {
+            return new Mago();
+        } else {
+            return null;
+        }
+    }
+}
+```
+
+---
+
+## **Fin del Apéndice**  
+
+_Este documento contiene todo el código utilizado en la historia, demostrando el uso de la Programación Orientada a Objetos (POO) en un contexto narrativo._
+
