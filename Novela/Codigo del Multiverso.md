@@ -137,8 +137,209 @@ Encendió el editor de código y comenzó a escribir su primera habilidad.
 
 ---
 
-## **Próximo capítulo: Métodos y Polimorfismo en Combate**  
-*Aiden aprenderá a programar sus propias habilidades para defenderse de los Bugs del Sistema.*  
+## Capítulo 3: Métodos y Polimorfismo en Combate  
+
+Aiden temblaba mientras los **Bugs del Sistema** avanzaban hacia él. Eran entidades corruptas, con fragmentos de código roto flotando a su alrededor. Byte revoloteó nervioso.
+
+—¡Aiden, necesitas un método de ataque! Usa la programación para defenderte.
+
+Aiden abrió la interfaz holográfica y escribió rápidamente:
+
+```java
+class Aiden {
+    String nombre;
+    int nivel;
+
+    Aiden(String nombre) {
+        this.nombre = nombre;
+        this.nivel = 1;
+    }
+
+    void atacar() {
+        System.out.println(nombre + " lanza un ataque de depuración.");
+    }
+}
+```
+
+Ejecutó el código y sintió cómo su cuerpo respondía. Levantó la mano y, sin saber cómo, generó un **haz de energía azul** que impactó contra uno de los Bugs, desintegrándolo.
+
+—¡Sí! —gritó, pero los demás Bugs seguían avanzando.
+
+Byte se iluminó.
+
+—Eso fue un método, pero necesitamos polimorfismo. No todos los Bugs son iguales. Debes adaptar tu ataque.
+
+Aiden entendió la idea y modificó su código:
+
+```java
+class Aiden {
+    String nombre;
+    int nivel;
+
+    Aiden(String nombre) {
+        this.nombre = nombre;
+        this.nivel = 1;
+    }
+
+    void atacar(String tipoBug) {
+        if (tipoBug.equals("SyntaxError")) {
+            System.out.println(nombre + " usa un ataque de corrección de sintaxis.");
+        } else if (tipoBug.equals("NullPointerException")) {
+            System.out.println(nombre + " lanza un ataque de inicialización de variables.");
+        } else {
+            System.out.println(nombre + " usa un ataque genérico de depuración.");
+        }
+    }
+}
+```
+
+Ejecutó el nuevo código y, al instante, vio cómo su ataque cambiaba dependiendo del Bug al que enfrentaba. Con un movimiento rápido, lanzó **"corrección de sintaxis"** contra un enemigo y **"inicialización de variables"** contra otro.
+
+Byte giró entusiasmado.
+
+—¡Lo lograste! Has aplicado **polimorfismo**.
+
+Aiden respiró agitado. Era solo el comienzo.
 
 ---
 
+## Capítulo 4: Herencia y la Clase Base Perdida  
+
+Después del combate, Aiden se dejó caer en el suelo, exhausto. Byte flotó a su lado.
+
+—Lo hiciste bien, pero aún falta mucho. Tienes métodos y polimorfismo, pero ahora necesitas **herencia**.
+
+Aiden se incorporó.
+
+—¿Herencia?
+
+Byte proyectó una imagen en el aire. Mostraba un diagrama de clases con líneas conectando distintos objetos.
+
+—No puedes construir todo desde cero. Necesitas aprovechar estructuras preexistentes. En este mundo, los programadores antiguos crearon una **clase base perdida** que contiene habilidades avanzadas. Si la encuentras, podrás heredar su poder.
+
+Aiden frunció el ceño.
+
+—¿Y dónde está esa clase?
+
+Byte parpadeó.
+
+—Está oculta en la **Zona de Código Antiguo**, pero nadie ha logrado acceder sin la clave de acceso correcta.
+
+Aiden abrió su interfaz y experimentó con herencia en su código:
+
+```java
+class Programador {
+    String lenguajeFavorito = "Java";
+
+    void programar() {
+        System.out.println("Escribiendo código en " + lenguajeFavorito);
+    }
+}
+
+class Aiden extends Programador {
+    Aiden() {
+        this.lenguajeFavorito = "Java y C#";
+    }
+}
+```
+
+Cuando ejecutó el código, sintió un nuevo conocimiento fluir en su mente. Podía **heredar** habilidades de una clase superior.
+
+Byte se emocionó.
+
+—¡Exacto! Acabas de aplicar **herencia**. Ahora podemos buscar la **clase base perdida**.
+
+Aiden miró el horizonte. Sabía que lo que venía sería aún más desafiante.
+
+---
+## Capítulo 5: Encapsulación y la Ciudad de los Datos Prohibidos  
+
+Aiden y Byte avanzaban por un paisaje digital que cambiaba constantemente, con líneas de código flotando en el aire y estructuras de datos emergiendo y desapareciendo. Frente a ellos, una metrópolis se extendía con enormes rascacielos hechos de binario puro.
+
+—Bienvenido a **DataVault**, la Ciudad de los Datos Prohibidos —dijo Byte—. Aquí se almacenan todas las variables y atributos del sistema.
+
+Aiden miró con asombro los edificios cubiertos de cadenas de números y caracteres.
+
+—¿Qué buscamos aquí?
+
+Byte proyectó una pantalla holográfica.
+
+—Necesitamos aprender sobre **encapsulación**. En este mundo, no toda la información debe estar accesible. Si los datos sensibles caen en manos equivocadas, el sistema colapsará.
+
+De repente, un grupo de figuras con máscaras de error **"Data Breach Detected"** los rodeó. Eran los **Hackers de Código Abierto**, y querían acceder a todos los datos privados del sistema.
+
+—¡Tenemos que restringir el acceso! —gritó Byte.
+
+Aiden abrió su editor y escribió:
+
+```java
+class Usuario {
+    private String contraseña;
+
+    Usuario(String contraseña) {
+        this.contraseña = contraseña;
+    }
+
+    public String obtenerContraseña() {
+        return "Acceso denegado. La contraseña es privada.";
+    }
+}
+```
+
+Los hackers intentaron acceder a la información, pero sus ataques rebotaban contra la seguridad de la clase.
+
+—¡Eso es encapsulación! —exclamó Byte—. Has restringido el acceso a los datos sensibles.
+
+Los hackers, frustrados, desaparecieron en una nube de código roto. Aiden sonrió.
+
+—Supongo que mantener las cosas privadas tiene su utilidad.
+
+Pero antes de que pudieran celebrar, un mensaje apareció en la pantalla flotante:
+
+**"Acceso a la Clase Base Perdida detectado en el Núcleo del Sistema."**  
+
+Su próxima misión los esperaba.
+
+---
+
+## Capítulo 6: La Abstracción del Núcleo del Sistema  
+
+Siguiendo la pista de la **Clase Base Perdida**, Aiden y Byte llegaron al **Núcleo del Sistema**, un enorme servidor central donde se almacenaban las funciones principales del Multiverso.
+
+Frente a ellos, una puerta de código encriptado bloqueaba el acceso.
+
+—Para entrar, necesitas demostrar que entiendes la **abstracción** —dijo Byte.
+
+Aiden revisó su interfaz. Sabía que la abstracción permitía ocultar los detalles de implementación y enfocarse solo en lo esencial. Modificó su código:
+
+```java
+abstract class Entidad {
+    String nombre;
+
+    Entidad(String nombre) {
+        this.nombre = nombre;
+    }
+
+    abstract void ejecutarAccion();
+}
+
+class Guerrero extends Entidad {
+    Guerrero(String nombre) {
+        super(nombre);
+    }
+
+    void ejecutarAccion() {
+        System.out.println(nombre + " ataca con su espada de código.");
+    }
+}
+```
+
+Ejecutó el código y, de inmediato, sintió una energía recorrer su cuerpo. La puerta de código encriptado se abrió lentamente.
+
+—¡Lo lograste! —exclamó Byte—. Al usar **abstracción**, definiste una clase base sin preocuparte por los detalles de cada implementación. ¡Has desbloqueado el acceso!
+
+Aiden dio un paso adelante, listo para descubrir los secretos del Núcleo del Sistema.
+
+Pero no estaban solos. Al otro lado de la puerta, una sombra los esperaba.
+
+---
