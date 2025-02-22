@@ -555,10 +555,64 @@ Sabía que el juego apenas había comenzado.
 
 # Apéndice 1: Código completo 
 ---
-## **Capítulo 1: La Línea de Código Prohibida**  
+## **Guía para Construir Proyectos Java en Visual Studio Code**
+
+Para ejecutar los códigos de esta novela en **Visual Studio Code**, sigue estos pasos:
+
+### **Opción 1: Usando Herramientas de Construcción (Build Tools)**
+1. **Instalar JDK**  
+   - Descarga e instala la última versión del **JDK (Java Development Kit)** desde [Oracle JDK](https://www.oracle.com/java/technologies/javase-downloads.html) o usa **OpenJDK**.
+
+2. **Configurar Visual Studio Code**  
+   - Instala la extensión **"Extension Pack for Java"** desde el marketplace.
+   - Configura la **ruta del JDK** en Visual Studio Code si es necesario.
+
+3. **Crear un Proyecto con Maven o Gradle**  
+   - Usa el comando en la terminal de VS Code:
+     ```sh
+     mvn archetype:generate -DgroupId=com.ejemplo -DartifactId=ProyectoJava -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
+     ```
+   - O con Gradle:
+     ```sh
+     gradle init --type java-application
+     ```
+
+4. **Compilar y Ejecutar el Código**  
+   - Para compilar:
+     ```sh
+     mvn compile
+     ```
+   - Para ejecutar:
+     ```sh
+     mvn exec:java -Dexec.mainClass="com.ejemplo.Main"
+     ```
+
+### **Opción 2: Sin Herramientas de Construcción (No Build Tools)**
+Si prefieres ejecutar código Java sin configurar Maven o Gradle:
+
+1. **Crear una Carpeta de Proyecto**  
+   - Crea una carpeta y dentro una subcarpeta llamada `src`.
+   - Dentro de `src`, guarda tus archivos **.java**.
+
+2. **Compilar y Ejecutar Manualmente**  
+   - Abre la terminal en VS Code y navega a la carpeta `src`.
+   - Compila el código con:
+     ```sh
+     javac NombreDelArchivo.java
+     ```
+   - Ejecuta el código con:
+     ```sh
+     java NombreDelArchivo
+     ```
+
+---
+
+## **Apéndice de Código - Listado Completo**
+
+### **Capítulo 1: La Línea de Código Prohibida**  
 
 ```java
-class RealityOverride extends Universe {
+class RealityOverride {
     private static boolean isActive = false;
 
     public static void activate() {
@@ -570,7 +624,7 @@ class RealityOverride extends Universe {
 
 ---
 
-## **Capítulo 2: La Instanciación del Héroe**  
+### **Capítulo 2: La Instanciación del Héroe**  
 
 ```java
 class Aiden {
@@ -585,9 +639,7 @@ class Aiden {
     void mostrarEstado() {
         System.out.println("Nombre: " + nombre + ", Nivel: " + nivel);
     }
-}
 
-public class Juego {
     public static void main(String[] args) {
         Aiden yo = new Aiden("Aiden Byte");
         yo.mostrarEstado();
@@ -597,7 +649,7 @@ public class Juego {
 
 ---
 
-## **Capítulo 3: Métodos y Polimorfismo en Combate**  
+### **Capítulo 3: Métodos y Polimorfismo en Combate**  
 
 ```java
 class Aiden {
@@ -610,12 +662,15 @@ class Aiden {
     }
 
     void atacar(String tipoBug) {
-        if (tipoBug.equals("SyntaxError")) {
-            System.out.println(nombre + " usa un ataque de corrección de sintaxis.");
-        } else if (tipoBug.equals("NullPointerException")) {
-            System.out.println(nombre + " lanza un ataque de inicialización de variables.");
-        } else {
-            System.out.println(nombre + " usa un ataque genérico de depuración.");
+        switch(tipoBug) {
+            case "SyntaxError":
+                System.out.println(nombre + " usa un ataque de corrección de sintaxis.");
+                break;
+            case "NullPointerException":
+                System.out.println(nombre + " lanza un ataque de inicialización de variables.");
+                break;
+            default:
+                System.out.println(nombre + " usa un ataque genérico de depuración.");
         }
     }
 }
@@ -623,7 +678,7 @@ class Aiden {
 
 ---
 
-## **Capítulo 4: Herencia y la Clase Base Perdida**  
+### **Capítulo 4: Herencia y la Clase Base Perdida**  
 
 ```java
 class Programador {
@@ -638,12 +693,17 @@ class Aiden extends Programador {
     Aiden() {
         this.lenguajeFavorito = "Java y C#";
     }
+
+    public static void main(String[] args) {
+        Aiden aiden = new Aiden();
+        aiden.programar();
+    }
 }
 ```
 
 ---
 
-## **Capítulo 5: Encapsulación y la Ciudad de los Datos Prohibidos**  
+### **Capítulo 5: Encapsulación y la Ciudad de los Datos Prohibidos**  
 
 ```java
 class Usuario {
@@ -661,7 +721,7 @@ class Usuario {
 
 ---
 
-## **Capítulo 6: La Abstracción del Núcleo del Sistema**  
+### **Capítulo 6: La Abstracción del Núcleo del Sistema**  
 
 ```java
 abstract class Entidad {
@@ -682,12 +742,17 @@ class Guerrero extends Entidad {
     void ejecutarAccion() {
         System.out.println(nombre + " ataca con su espada de código.");
     }
+
+    public static void main(String[] args) {
+        Guerrero g = new Guerrero("Aiden");
+        g.ejecutarAccion();
+    }
 }
 ```
 
 ---
 
-## **Capítulo 7: Interfaces y la Inteligencia Artificial Suprema**  
+### **Capítulo 7: Interfaces y la Inteligencia Artificial Suprema**  
 
 ```java
 interface Hackeable {
@@ -703,7 +768,7 @@ class Virus implements Hackeable {
 
 ---
 
-## **Capítulo 8: Excepciones y el Último Bug**  
+### **Capítulo 8: Excepciones y el Último Bug**  
 
 ```java
 class Sistema {
@@ -726,7 +791,7 @@ public class Hackeo {
 
 ---
 
-## **Capítulo 9: Patrones de Diseño y el Código Final**  
+### **Capítulo 9: Patrones de Diseño y el Código Final**  
 
 ```java
 class KernelSistema {
@@ -747,7 +812,7 @@ class KernelSistema {
 
 ---
 
-## **Capítulo 10: Refactorización del Multiverso**  
+### **Capítulo 10: Refactorización del Multiverso**  
 
 ```java
 interface Entidad {
@@ -783,5 +848,5 @@ class FabricaEntidades {
 
 ## **Fin del Apéndice**  
 
-_Este documento contiene todo el código utilizado en la historia, demostrando el uso de la Programación Orientada a Objetos (POO) en un contexto narrativo._
+_Este documento contiene todo el código utilizado en la historia, con ejemplos corregidos y listos para ejecutar en Visual Studio Code._
 
