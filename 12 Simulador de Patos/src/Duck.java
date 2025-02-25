@@ -11,7 +11,7 @@ public abstract class Duck {
     }
     
     public void swim() {
-        System.out.println("I´m swimming");
+        System.out.println("I'm swimming");
     }
 
     public void performQuack() {
