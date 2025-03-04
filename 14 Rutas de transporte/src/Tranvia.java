@@ -5,4 +5,8 @@ public class Tranvia implements CalcularRuta {
         System.out.println("Ruta en tranvia...");
     }    
 
+    public String toString () {
+        return "Ruta en tranvia...";
+    }
+
 }
