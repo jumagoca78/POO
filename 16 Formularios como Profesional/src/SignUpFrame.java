@@ -2,7 +2,6 @@ import java.awt.*;
 import javax.swing.*;
 
 /*
-explica el GridBagLayout
 GridBagLayout es un administrador de diseño que permite colocar componentes en una cuadrícula de celdas, 
 lo que permite un control más preciso sobre la posición y el tamaño de los componentes.
 Cada componente se coloca en una celda de la cuadrícula y puede ocupar una o más celdas de la cuadrícula.
