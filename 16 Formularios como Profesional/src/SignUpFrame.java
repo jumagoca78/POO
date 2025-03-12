@@ -1,6 +1,37 @@
 import java.awt.*;
 import javax.swing.*;
 
+/*
+explica el GridBagLayout
+GridBagLayout es un administrador de diseño que permite colocar componentes en una cuadrícula de celdas, 
+lo que permite un control más preciso sobre la posición y el tamaño de los componentes.
+Cada componente se coloca en una celda de la cuadrícula y puede ocupar una o más celdas de la cuadrícula.
+Los componentes se colocan en la cuadrícula utilizando un objeto GridBagConstraints que especifica la posición, 
+el tamaño y otros atributos del componente.
+Los componentes se agregan al contenedor utilizando el método add() con el objeto GridBagConstraints como argumento.
+GridBagLayout es más flexible que otros administradores de diseño, pero también es más complicado de usar debido a la 
+necesidad de configurar los objetos GridBagConstraints correctamente.
+En general, se recomienda utilizar GridBagLayout cuando se necesita un control preciso sobre la posición y el tamaño de 
+los componentes en un contenedor.
+
+En este programa que significa
+En este programa, se utiliza GridBagLayout para colocar los componentes en un marco de ventana de registro.
+Se crea un objeto GridBagConstraints para especificar la posición y el tamaño de cada componente en la cuadrícula.
+insets se utiliza para agregar un espacio entre los componentes y fill se utiliza para especificar cómo se debe redimensionar 
+un componente si el tamaño de la celda es mayor que el tamaño del componente.
+gridx y gridy se utilizan para especificar la posición de la celda en la cuadrícula, y gridwidth se utiliza para especificar
+el número de celdas que debe ocupar el componente en la dirección x.
+gridwith se utiliza para especificar el número de celdas que debe ocupar el componente en la dirección y.
+
+Los componentes se agregan al marco de la ventana utilizando el método add() con el objeto GridBagConstraints como argumento.
+Esto permite colocar los componentes en posiciones específicas en la ventana y controlar su tamaño y alineación.
+Por ejemplo, el título "Sign Up" se coloca en la parte superior de la ventana con un tamaño de fuente grande y alineación a la izquierda.
+
+
+
+ * 
+ */
+
 public class SignUpFrame extends JFrame {
 
     public SignUpFrame() {
