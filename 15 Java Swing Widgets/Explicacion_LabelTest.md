@@ -17,7 +17,7 @@ Cada `JLabel` tiene una descripción emergente (*tooltip*) que se muestra cuando
   - La tercera etiqueta contiene una imagen con el texto alineado en la parte inferior.
 - Se configura el `setToolTipText` para mostrar información adicional al pasar el mouse sobre cada etiqueta.
 
-## Código en Java Swing (actualizado en español)
+## Código en Java Swing 
 ```java
 import javax.swing.*;
 import java.awt.*;
@@ -35,7 +35,7 @@ public class PruebaEtiqueta extends JFrame {
         add(etiqueta1);
 
         // Segunda etiqueta con texto e ícono
-        Icon icono = new ImageIcon("icono.png");
+        Icon icono = new ImageIcon("src/Etiquetas/java.GIF");
         etiqueta2 = new JLabel("Etiqueta con texto e imagen", icono, SwingConstants.LEFT);
         etiqueta2.setToolTipText("Esta es la etiqueta 2");
         add(etiqueta2);
@@ -62,5 +62,5 @@ public class PruebaEtiqueta extends JFrame {
 ```
 
 ## Ejecución
-Para ejecutar este programa, compílalo con `javac PruebaEtiqueta.java` y luego ejecútalo con `java PruebaEtiqueta`. Asegúrate de tener una imagen llamada **icono.png** en el mismo directorio.
+Para ejecutar este programa, compílalo con `javac PruebaEtiqueta.java` y luego ejecútalo con `java PruebaEtiqueta`. Asegúrate de tener una imagen llamada **JAVA.GIF** en el mismo directorio.
 
