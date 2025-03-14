@@ -1,5 +1,7 @@
 # Explicación de LabelTest.java en Java Swing
 
+<img alt="Ejemplo de uso de eqtiquetas" src="https://github.com/jumagoca78/POO/blob/main/15%20Java%20Swing%20Widgets/Todos%20los%20Widgets/imagenes/JLabel.jpg">
+
 ## Descripción
 Este programa demuestra el uso del componente `JLabel` en una interfaz gráfica de usuario en **Java Swing**. Permite la creación de etiquetas con diferentes configuraciones:
 
