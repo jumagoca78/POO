@@ -12,5 +12,10 @@ public class Aeropuerto{
     public void acepta (TransporteVolador transporteVolador){
         this.transporteVolador = transporteVolador;
     }
-    
+
+    @Override
+    public String toString(){
+        return "Aeropuerto con servicio de vuelo disponible " + transporteVolador;
+    }
+
 }

@@ -5,4 +5,8 @@ public class DragonDomestico implements TransporteVolador {
         System.out.println("Volando en dragon doméstico desde " + origen + " hasta " + destino + " con " + pasajeros + " pasajeros");
     }
     
+    @Override
+    public String toString() {
+        return "Dragon Domético";
+    }
 }

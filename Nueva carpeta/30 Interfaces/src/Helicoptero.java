@@ -5,4 +5,9 @@ public class Helicoptero implements TransporteVolador {
         System.out.println("Volando en helicoptero desde " + origen + " hasta " + destino + " con " + pasajeros + " pasajeros");
     }   
     
+
+    @Override
+    public String toString() {
+        return "Helicopero";
+    }
 }
