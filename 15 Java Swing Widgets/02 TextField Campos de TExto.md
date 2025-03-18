@@ -1,5 +1,8 @@
 # Explicación de TextFieldTest.java en Java Swing
 
+<img alt="Ejemplo de tipos de campos de texto" src="https://github.com/jumagoca78/POO/blob/main/15%20Java%20Swing%20Widgets/Todos%20los%20Widgets/imagenes/JTextField.jpg">
+
+
 ## Descripción
 Este programa demuestra el uso de `JTextField` y `JPasswordField` en una interfaz gráfica de usuario en **Java Swing**. Se pueden introducir textos en los campos y capturar el evento cuando el usuario presiona *Enter*.
 
