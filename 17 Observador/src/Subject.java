@@ -1,5 +1,5 @@
 
-public abstract class Subject {
+public interface Subject {
 
     //metodos abstractos
     public abstract void registerObserver(Observer o);
