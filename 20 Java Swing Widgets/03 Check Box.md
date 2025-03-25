@@ -1,5 +1,6 @@
 ## **3️⃣ JCheckBox - Casilla de Verificación**
 Un **JCheckBox** permite seleccionar o deseleccionar una opción.
+<img alt="Ejemplo de tipos de campos de texto" src="https://github.com/jumagoca78/POO/blob/main/15%20Java%20Swing%20Widgets/Todos%20los%20Widgets/imagenes/CheckBox.jpg">
 
 ### **📌 Código Ejemplo**
 ```java
