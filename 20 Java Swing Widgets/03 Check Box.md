@@ -10,6 +10,8 @@ Este programa demuestra el uso de `JCheckBox` en una interfaz gráfica de usuari
   - **Cursiva**: Cambia la fuente a cursiva.
 - Se utiliza un **manejador de eventos** (`ItemListener`) para modificar dinámicamente el estilo de la fuente en función de la selección del usuario.
 
+<img alt="Ejemplo de tipos de campos de texto" src="https://github.com/jumagoca78/POO/blob/main/15%20Java%20Swing%20Widgets/Todos%20los%20Widgets/imagenes/CheckBox.jpg">
+
 ## Código en Java Swing (actualizado en español)
 ```java
 import javax.swing.*;
