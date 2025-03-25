@@ -2,6 +2,8 @@
 
 ## Descripción
 Este programa demuestra el uso de `JComboBox` en una interfaz gráfica de usuario en **Java Swing**. Permite seleccionar una imagen de una lista desplegable y cambiar dinámicamente la imagen mostrada en la interfaz.
+<img alt="Ejemplo de tipos de campos de texto" src="https://github.com/jumagoca78/POO/blob/main/20%20Java%20Swing%20Widgets/Todos%20codigos%20de%20los%20Widgets/imagenes/ComboBox.jpg">
+
 
 ## Funcionamiento
 1. **Configuración de la interfaz gráfica (`JFrame`)**  
