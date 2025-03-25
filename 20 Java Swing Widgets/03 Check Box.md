@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 # Explicación de CheckBoxTest.java en Java Swing
+=======
+## **3️⃣ JCheckBox - Casilla de Verificación**
+Un **JCheckBox** permite seleccionar o deseleccionar una opción.
+<img alt="Ejemplo de tipos de campos de texto" src="https://github.com/jumagoca78/POO/blob/main/15%20Java%20Swing%20Widgets/Todos%20los%20Widgets/imagenes/CheckBox.jpg">
+>>>>>>> 2d79848f131eee5ed383a6d0db8444c1ca9781c7
 
 <img alt="Ejemplo de tipos de campos de texto" src="https://github.com/jumagoca78/POO/blob/main/15%20Java%20Swing%20Widgets/Todos%20los%20Widgets/imagenes/CheckBox.jpg">
 
@@ -66,9 +72,13 @@ public class PruebaCheckBox extends JFrame {
         new PruebaCheckBox();
     }
 }
+<<<<<<< HEAD
 
 ```
 
 ## Ejecución
 Para ejecutar este programa, compílalo con `javac PruebaCheckBox.java` y luego ejecútalo con `java PruebaCheckBox`. 
 
+=======
+```
+>>>>>>> 2d79848f131eee5ed383a6d0db8444c1ca9781c7
