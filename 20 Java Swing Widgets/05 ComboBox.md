@@ -26,66 +26,56 @@ Este programa demuestra el uso de `JComboBox` en una interfaz gráfica de usuari
 ```java
 // Fig. 13.13: ComboBoxTest.java
 // Using a JComboBox to select an image to display.
+package ComboBox;
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class ComboBoxTest extends JFrame {
-   private JComboBox imagesComboBox;
-   private JLabel label;
+public class PruebaComboBox extends JFrame {
+    @SuppressWarnings("FieldMayBeFinal")
+    private JComboBox<String> comboImagenes;
+    @SuppressWarnings("FieldMayBeFinal")
+    private JLabel etiquetaImagen;
 
-   private String names[] = 
-      { "bug1.gif", "bug2.gif",  "travelbug.gif", "buganim.gif" };
-   private Icon icons[] = { new ImageIcon( names[ 0 ] ),
-      new ImageIcon( names[ 1 ] ), new ImageIcon( names[ 2 ] ),
-      new ImageIcon( names[ 3 ] ) };
+     private final String nombresImagenes[] = { "java", "java1","java2","java3"};
+    private final Icon iconos[] = { new ImageIcon(getClass().getResource("/ComboBox/java.gif")),
+                              new ImageIcon(getClass().getResource("/ComboBox/java1.gif")),
+                              new ImageIcon(getClass().getResource("/ComboBox/java2.gif")),
+                              new ImageIcon(getClass().getResource("/ComboBox/java3.gif")) };
 
-   // set up GUI
-   public ComboBoxTest()
-   {
-      super( "Testing JComboBox" );
-    
-      // get content pane and set its layout
-      Container container = getContentPane();
-      container.setLayout( new FlowLayout() );      
+    public PruebaComboBox() {
+        super("Prueba de JComboBox");
+        setLayout(new FlowLayout());
 
-      // set up JComboBox and register its event handler
-      imagesComboBox = new JComboBox( names );
-      imagesComboBox.setMaximumRowCount( 3 );
-      imagesComboBox.addItemListener(
+        // Configurar JComboBox y registrar su manejador de eventos
+        comboImagenes = new JComboBox<>(nombresImagenes);
+        comboImagenes.setMaximumRowCount(3);
+        comboImagenes.addItemListener(new ManejadorComboBox());
 
-         new ItemListener() {  // anonymous inner class 
+        add(comboImagenes);
 
-            // handle JComboBox event
-            public void itemStateChanged( ItemEvent event )
-            {
-               // determine whether check box selected
-			   if ( event.getStateChange() == ItemEvent.SELECTED )
-                  label.setIcon( icons[ 
-                     imagesComboBox.getSelectedIndex() ] );
+        // Configurar JLabel para mostrar imágenes
+        etiquetaImagen = new JLabel(iconos[3]);
+        add(etiquetaImagen);
+
+        setSize(350, 100);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setVisible(true);
+    }
+
+    private class ManejadorComboBox implements ItemListener {
+        @Override
+        public void itemStateChanged(ItemEvent evento) {
+            if (evento.getStateChange() == ItemEvent.SELECTED) {
+                etiquetaImagen.setIcon(iconos[comboImagenes.getSelectedIndex()]);
             }
+        }
+    }
 
-         }  // end anonymous inner class
-
-      ); // end call to addItemListener
-
-      container.add( imagesComboBox );
-
-      // set up JLabel to display ImageIcons
-      label = new JLabel( icons[ 0 ] );
-      container.add( label );
-
-      setSize( 350, 100 );
-      setVisible( true );
-
-   } // end ComboBoxTest constructor
-
-   public static void main( String args[] )
-   { 
-      ComboBoxTest application = new ComboBoxTest();
-      application.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
-   }
-
+    public static void main(String[] args) {
+        new PruebaComboBox();
+    }
 } // end class ComboBoxTest
 
 ```
