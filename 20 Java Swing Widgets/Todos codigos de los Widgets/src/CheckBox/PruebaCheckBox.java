@@ -1,22 +1,7 @@
-# Explicación de CheckBoxTest.java en Java Swing
-
-<img alt="Ejemplo de tipos de campos de texto" src="https://github.com/jumagoca78/POO/blob/main/15%20Java%20Swing%20Widgets/Todos%20los%20Widgets/imagenes/CheckBox.jpg">
-
-## Descripción
-Este programa demuestra el uso de `JCheckBox` en una interfaz gráfica de usuario en **Java Swing**. Permite cambiar el estilo de fuente de un campo de texto seleccionando opciones de **negrita** o **cursiva**.
-
-## Funcionamiento
-- Se utiliza un campo de texto `JTextField` para mostrar el mensaje.
-- Se crean dos casillas de verificación (`JCheckBox`):
-  - **Negrita**: Cambia la fuente a negrita.
-  - **Cursiva**: Cambia la fuente a cursiva.
-- Se utiliza un **manejador de eventos** (`ItemListener`) para modificar dinámicamente el estilo de la fuente en función de la selección del usuario.
-
-## Código en Java Swing (actualizado en español)
-```java
-import javax.swing.*;
+package CheckBox;
 import java.awt.*;
 import java.awt.event.*;
+import javax.swing.*;
 
 public class PruebaCheckBox extends JFrame {
     private JTextField campoTexto;
@@ -66,9 +51,3 @@ public class PruebaCheckBox extends JFrame {
         new PruebaCheckBox();
     }
 }
-
-```
-
-## Ejecución
-Para ejecutar este programa, compílalo con `javac PruebaCheckBox.java` y luego ejecútalo con `java PruebaCheckBox`. 
-
