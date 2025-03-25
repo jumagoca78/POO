@@ -37,7 +37,8 @@ public class PruebaEtiqueta extends JFrame {
         add(etiqueta1);
 
         // Segunda etiqueta con texto e ícono
-        Icon icono = new ImageIcon("src/Etiquetas/java.GIF");
+        //getResource() busca el archivo dentro del classpath y devuelve una URL si lo encuentra. Si el recurso no existe, devuelve null
+        Icon icono = new ImageIcon(getClass().getResource("/Etiquetas/java.GIF")); 
         etiqueta2 = new JLabel("Etiqueta con texto e imagen", icono, SwingConstants.LEFT);
         etiqueta2.setToolTipText("Esta es la etiqueta 2");
         add(etiqueta2);

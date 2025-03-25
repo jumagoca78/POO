@@ -1,6 +1,6 @@
 # Explicación de TextFieldTest.java en Java Swing
 
-<img alt="Ejemplo de tipos de campos de texto" src="https://github.com/jumagoca78/POO/blob/main/15%20Java%20Swing%20Widgets/Todos%20los%20Widgets/imagenes/JTextField.jpg">
+<img alt="Ejemplo de tipos de campos de texto" src="https://github.com/jumagoca78/POO/blob/main/20%20Java%20Swing%20Widgets/Todos%20codigos%20de%20los%20Widgets/imagenes/JTextField.jpg">
 
 
 ## Descripción
