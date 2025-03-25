@@ -1,5 +1,7 @@
 # Explicación de RadioButtonTest.java en Java Swing
 
+<img alt="Ejemplo de tipos de campos de texto" src="https://github.com/jumagoca78/POO/blob/main/20%20Java%20Swing%20Widgets/Todos%20codigos%20de%20los%20Widgets/imagenes/RadioButton.jpg">
+
 ## Descripción
 Este programa demuestra el uso de `JRadioButton` en una interfaz gráfica de usuario en **Java Swing**. Permite cambiar el estilo de fuente de un campo de texto seleccionando diferentes opciones de formato:
 
