@@ -1,6 +1,8 @@
+package BasesDeDatos;
+
 import java.awt.event.*;
-import javax.swing.*;
 import java.sql.*;
+import javax.swing.*;
 
 public class BuscarRegistro implements ActionListener {
     private JTextField[] campos;

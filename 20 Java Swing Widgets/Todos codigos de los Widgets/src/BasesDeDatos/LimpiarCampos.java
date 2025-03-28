@@ -1,3 +1,5 @@
+package BasesDeDatos;
+
 import java.awt.event.*;
 import javax.swing.*;
 
