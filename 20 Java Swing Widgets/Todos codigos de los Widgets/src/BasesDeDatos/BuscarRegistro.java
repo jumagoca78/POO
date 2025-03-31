@@ -32,13 +32,13 @@ public class BuscarRegistro implements ActionListener {
                     for (int i = 2; i < campos.length; i++) {
                         campos[i].setText(resultado.getString(i + 1)); // índice inicia en 3
                     }
-                    JOptionPane.showMessageDialog(null, "✅ Registro encontrado.");
+                    JOptionPane.showMessageDialog(null, "Registro encontrado.");
                 } else {
-                    JOptionPane.showMessageDialog(null, "⚠️ No se encontró ningún registro con ese nombre y apellido.");
+                    JOptionPane.showMessageDialog(null, "No se encontró ningún registro con ese nombre y apellido.");
                 }
             }
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "❌ Error al buscar registro: " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Error al buscar registro: " + e.getMessage());
         }
     }
 }
