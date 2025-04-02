@@ -1,7 +1,8 @@
+package BasesDeDatos;
 import java.awt.event.*;
-import javax.swing.*;
-import java.sql.*;
 import java.security.MessageDigest;
+import java.sql.*;
+import javax.swing.*;
 
 /**
  * Clase que permite actualizar registros en la base de datos SQLite.
@@ -10,7 +11,7 @@ import java.security.MessageDigest;
 public class ActualizarRegistroEnc implements ActionListener {
     private JTextField[] campos;
 
-    public ActualizarRegistro(JTextField[] campos) {
+    public ActualizarRegistroEnc(JTextField[] campos) {
         this.campos = campos;
     }
 
@@ -70,13 +71,13 @@ public class ActualizarRegistroEnc implements ActionListener {
 
                 int filasActualizadas = stmt.executeUpdate();
                 if (filasActualizadas > 0) {
-                    JOptionPane.showMessageDialog(null, "✅ Registro actualizado correctamente.");
+                    JOptionPane.showMessageDialog(null, "Registro actualizado correctamente.");
                 } else {
-                    JOptionPane.showMessageDialog(null, "⚠️ No se encontró el registro a actualizar.");
+                    JOptionPane.showMessageDialog(null, "No se encontró el registro a actualizar.");
                 }
             }
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "❌ Error al actualizar registro: " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Error al actualizar registro: " + e.getMessage());
         }
     }
 }
