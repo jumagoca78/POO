@@ -16,14 +16,18 @@ public class AgregarRegistroEnc implements ActionListener {
 
     /**
      * Método que encripta un texto usando el algoritmo SHA-256.
+     * el algoritmo SHA-256 para encriptar el nombre y apellido. Este algoritmo funciona 
+     * con un hash, lo que significa que no se puede revertir el proceso de encriptación.
+     * Guardamos el hash en la base de datos, lo que permite verificar la identidad del usuario sin almacenar su información sensible.
+     * En la busqueda, se compara el hash del nombre y apellido ingresados por el usuario con el hash almacenado en la base de datos.
      * @param texto El texto a encriptar.
      * @return Cadena hexadecimal con el hash generado.
      */
     private String encriptarSHA256(String texto) {
         try {
-            MessageDigest digest = MessageDigest.getInstance("SHA-256");
-            byte[] hash = digest.digest(texto.getBytes("UTF-8"));
-            StringBuilder hexString = new StringBuilder();
+            MessageDigest digest = MessageDigest.getInstance("SHA-256");//// Obtenemos una instancia del algoritmo SHA-256
+            byte[] hash = digest.digest(texto.getBytes("UTF-8")); // Convertimos el texto a bytes y generamos el hash
+            StringBuilder hexString = new StringBuilder();//StringBuilder para almacenar el hash en formato hexadecimal
 
             // Convertimos los bytes en formato hexadecimal
             for (byte b : hash) {
@@ -60,13 +64,13 @@ public class AgregarRegistroEnc implements ActionListener {
                 // Ejecutar la inserción
                 int filasInsertadas = stmt.executeUpdate();
                 if (filasInsertadas > 0) {
-                    JOptionPane.showMessageDialog(null, "✅ Registro agregado con nombre y apellido encriptados.");
+                    JOptionPane.showMessageDialog(null, "Registro agregado con nombre y apellido encriptados.");
                 } else {
-                    JOptionPane.showMessageDialog(null, "⚠️ No se pudo agregar el registro.");
+                    JOptionPane.showMessageDialog(null, " No se pudo agregar el registro.");
                 }
             }
         } catch (SQLException e) {
-            JOptionPane.showMessageDialog(null, "❌ Error SQL: " + e.getMessage());
+            JOptionPane.showMessageDialog(null, "Error SQL: " + e.getMessage());
         }
     }
 }
